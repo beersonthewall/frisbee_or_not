@@ -11,3 +11,21 @@ If the environment was updated, run
 conda env export > environment.yml
 ```
 to update those changes in the environment.yml file.
+
+## Build
+To build to docker image for this project run:
+
+```
+docker build ./ -t fris
+```
+
+## Run
+for development:
+```
+python src/wsgi.py
+```
+
+for production:
+```
+docker --name fris -p 80:5000 --rm fris:latest
+```
