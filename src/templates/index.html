@@ -1,10 +1,21 @@
 <!doctype html>
 <html>
   <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
   </head>
 
   <body>
-    <p>Hello, World!</p>
-  </body>
+    <header id="header">
+      <h1>Frisbee Or Not</h1>
+      <p>Upload a photo and see if the neural network recognizes the sport!</p>
+    </header>
 
+    <div id="inputContainer">
+      <form id="fileUpload" method="post" enctype="multipart/form-data" action="/classify">
+        <input type="file">
+        <input type="submit" value="Upload">
+      </form>
+    </div>
+
+  </body>
 </html>
