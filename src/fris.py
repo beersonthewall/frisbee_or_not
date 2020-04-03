@@ -25,8 +25,8 @@ def classify():
     if file and allowed_file(file.filename):
         bytes = file.read()
         img = open_image(BytesIO(bytes))
-        prediction,_,outputs = learner.predict(img)
-        return render_template("index.html", prediction=prediction, losses=outputs)
+        prediction,label,outputs = learner.predict(img)
+        return render_template("index.html", prediction=prediction, confidence=outputs[label])
     else:
         flash('File type not allowed')
         return redirect(request.url)
