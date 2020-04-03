@@ -12,9 +12,15 @@
 
     <div id="inputContainer">
       <form id="fileUpload" method="post" enctype="multipart/form-data" action="/classify">
-        <input type="file">
+        <input type="file" name="file" required>
         <input type="submit" value="Upload">
       </form>
+    </div>
+
+    <div id="result">
+      {{ prediction }}
+      {{ losses }}
+      {{ error }}
     </div>
 
   </body>

@@ -18,3 +18,10 @@
 #fileUpload {
     text-align: center;
 }
+
+#result {
+    margin-left: auto;
+    margin-right: auto;
+    width: 66.66%;
+    text-align: center;
+}
