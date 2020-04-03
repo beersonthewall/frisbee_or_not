@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, flash
-from fastai.vision import *
+from fastai.vision import open_image, Learner, load_learner
+from io import BytesIO
 
 ALLOWED_EXTENSIONS = ['png', 'jpg', 'jpeg']
 MODEL_PATH = 'model/'
