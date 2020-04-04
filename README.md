@@ -27,5 +27,5 @@ python src/wsgi.py
 
 for production:
 ```
-docker --name fris -p 80:5000 --rm fris:latest
+docker run --name fris -p 80:5000 --rm fris:latest
 ```

@@ -4,7 +4,7 @@ WORKDIR /fris_or_not/
 
 COPY environment.yml ./
 COPY src/ ./
-COPY model/ ./
+COPY model/export.pkl ./model/export.pkl
 COPY boot.sh ./
 
 RUN chmod +x boot.sh
